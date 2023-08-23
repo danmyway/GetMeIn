@@ -1,10 +1,6 @@
 # GetMeIn
 A utility to easily deploy Alma Linux 8, Rocky Linux 8 and CentOS 7 on GCP.
 
-More information will follow.
-
-Please refer to --help.
-
 ## Usage 
 
 #### Available images
