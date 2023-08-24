@@ -6,8 +6,10 @@ import subprocess
 import sys
 import time
 
-from __main__ import ARGS, CONFIG_PATH, IMAGE_MAPPING, LOGGER
-from __main__ import get_config
+from globals import CONFIG_PATH, IMAGE_MAPPING, LOGGER
+from globals import get_config, parse_args
+
+ARGS = parse_args()
 
 
 def initialize_gcloud():
