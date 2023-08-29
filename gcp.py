@@ -25,9 +25,9 @@ def initialize_gcloud():
     LOGGER.info("> INIT: Checking if the google-cloud-sdk.repo is present.")
     if not os.path.exists(gcloud_repo_path):
         LOGGER.info("> INIT: Adding google-cloud-sdk repository")
-        copy_repo_command = ["cp", gcloud_repo_content, gcloud_repo_path]
+        copy_repo_command = ["sudo", "cp", gcloud_repo_content, gcloud_repo_path]
         LOGGER.debug(f"Running command: {copy_repo_command}")
-        subprocess.run(copy_repo_command, shell=True, check=True)
+        subprocess.run(copy_repo_command, check=True)
     LOGGER.info("> INIT: google-cloud-sdk.repo is added.")
     # Install google-cloud-cli
     install_gcloud_pkg = ["sudo", "dnf", "install", "google-cloud-cli"]
