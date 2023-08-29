@@ -203,7 +203,7 @@ def _instance_ssh(instance_name):
     #
 
     wait_time = 60
-    gcloud_ssh_command = "gcloud", "compute," "ssh", f"root@{instance_name}"
+    gcloud_ssh_command = "gcloud", "compute", "ssh", f"root@{instance_name}"
     gcloud_ssh_key_path = os.path.expanduser("~/.ssh/google_compute_engine")
     LOGGER.info(f"Waiting for {wait_time} seconds for the instance to become alive.")
     while wait_time > 0:
